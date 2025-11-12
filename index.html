@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Título caligrafiado + cuerpo legible -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Sobre -->
+  <div class="valentines-day" role="button" tabindex="0" aria-label="Abrir carta">
+    <div class="envelope"></div>
+    <div class="heart" aria-hidden="true"></div>
+    <div class="text" aria-hidden="true">CARTA<br>PARA TI</div>
+    <div class="front" aria-hidden="true"></div>
+  </div>
+
+  <!-- Tarjeta abierta tipo libro -->
+  <div id="card" role="dialog" aria-live="polite" aria-hidden="true">
+    <div class="card3d">
+      <div class="book">
+        <!-- Página izquierda (decorativa) -->
+        <section class="page left">
+          <div class="inner">
+            <h3 class="subtitle">PARA</h3>
+            <h2 class="title">Mi reina ❤️✨</h2>
+            <div class="flourish" aria-hidden="true"></div>
+            <div class="photo-frame">
+              <img src="less.jpeg" alt="Foto especial" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Página derecha (contenido con scroll) -->
+        <section class="page right">
+          <div class="inner">
+            <h2 class="title title-small">Leslie Monteagudo</h2>
+            <div class="letter" id="letterBox">
+              <!-- TEXTO LARGO -->
+              <p>Hola mi reina, bueno en primer lugar, espero que te encuentres muy bien, te cuento que estoy aprendiendo mucho jejeje, hoy tuve otra sesión jejeje y pues he aprendido a comprender mucho ambas situaciones, siento que me ha ayudado, pero igual quería comentarte algo, hoy vi cierta cosilla y no quiero que pienses que no te escribo por querer que “vos me busques” o babosadas así, solo trato de respetar ese espacio y no agobiar, si por mí fuera ya sabes como buscaría tratarte y pues entiendo en parte cierto nivel de bloqueo emocional y el actuar de tu parte de una semana para acá, tienes razón y comprendo un poco más con respecto a las sesiones que paso (casualmente no quería pasar sesiones psicológicas pero bien de la nd surgieron jajaja), la verdad es que yo tenía apego ansioso y tú apego evitativo 😅 eso provoca el encierro y que te sientas mejor “sola” pero no es tanto elección, sino como un mecanismo de defensa que tienes y entiendo en parte, has pasado por mucho y te ha tocado madurar y resolverte por tu cuenta y desde temprana edad, no tanto por elección, sino por tener que hacerlo, es similar a lo mío, pero el detalle es que en mí tiene cierto contrario por la hipersensibilidad emocional y por el extenso historial psicológico que tengo jajaja…. Pero ten en cuenta que siempre te tengo presente en mucho ❤️</p>
+
+              <p>Sé y entiendo por lo que estás pasando y pues se siente complicado entender y a veces sentir que es como una pared, pero estoy comenzando a calmar mi ansiedad con comprensión y pues a veces no sé cómo actuar por ello, pero trato de tomar la elección correcta (a veces para comprender, hasta me asesoro de chatgpt 😂👌 y al final hago lo que quiero xd). Entiendo tu proceso en cierta parte, porque en unas ocasiones, quizás ha hecho efecto los intentos de los vichos que me dicen que pasará lo mismo que a ellos (prácticamente como que no quieren que me pase lo mismo), que simplemente estés conociendo a alguien o algo así y pues que puesi va, en parte es inevitable porque digo, que hoy tienes para elegir como me dijeron jejeje, que por eso no quería estar en relación, esto y lo otro, pero no lo veo tanto así y otra parte de mí me dice “cállate vos loco, que importa lo que diga le gente? No quiere decir que tengan razón” y la verdad que hoy siento con más fuerza que no es por ello que simplemente es por todo lo que pasas y comprendo mejor tu condición y está mal? No del todo, pero es algo que preocupa porque no hará muy bien en general, créeme sigo con la idea de ayudarte a curarte de ello y me gustaría darte todo lo que siento jejeje pero sé y comprendo lo que significa para ti (es mucho y no me ajustará la carta jjsjsjs) por eso no quiero agobiarte, pero si sientes que está mal el que actuemos así o si verdaderamente sientes que no ayuda o algo, no dudes en comunicarlo, por mí mejor jajaja, pero igual, siento que dejándome ayudar de quien sabe mi ansiedad se calma y aprendo mucho y he podido comprenderte mi reina ❤️</p>
+
+              <p>Y la verdad hago ciertas prácticas y veo algo y trato de replicarlo y por ello últimamente he hecho varias cartas y así siento que es una forma no invasiva de expresártelo tú puedes ❤️✨ pero no tienes porque cargar con todo sola, recuerda, a veces uno trabaja mejor solo, pero está bien apoyarse y expresarse, no es depender de alguien, si no, es de sabios el no sobre exigirse, reitero no estas sola y te hago esto con mucho cariño y amor ❤️✨</p>
+            </div>
+
+            <!-- Botón cerrar con efecto -->
+            <button id="closeBtn" class="close-fixed" aria-label="Cerrar carta con efecto de quemado">Cerrar carta 🔥</button>
+          </div>
+        </section>
+
+        <!-- Pliegue -->
+        <div class="spine" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- MODAL: DEDICATORIA (solo lectura con tu mensaje) -->
+<div id="dedicationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dedicTitle" aria-hidden="true">
+  <div class="modal-content">
+    <h3 id="dedicTitle">quiero decirte algo</h3>
+    <p class="modal-sub">Después de la carta, déjale unas palabras especiales.</p>
+
+    <!-- Caja de mensaje (scroll interno) -->
+    <div id="dedicMsg" class="message-box">
+Bueno, después de todo te diré algo quizás fuera de lugar, no sé como ha estado tu semana como tal, pero me imagino que ha sido pesada, pero confío en tus capacidades, tu fuerza y el valor y empeño que le pones a todo ❤️ he notado que no te has quitado el anillo y el colgante y eso me hace sentir bien ❤️✨ ánimos, ya casi se va iva 😂❤️ confío en ti ❤️✨ si te doy algo de cariño, de aprecio, amor o lo que soy contigo, es porque cada cosa que te doy te lo mereces ❤️✨ no dudes de ello, puede que te abrume un poco, pero ten en cuenta que cada cosa que te doy o soy contigo te lo mereces ❤️✨ y nunca creas que no cumples con algo, pasa etapas difíciles y te cuestan muchas cosas y pues estoy aprendiendo a comprender eso ❤️✨espero pronto te sientas segura y pues pueda verte y no tengas miedo de las cosas, no son en vano ❤️✨ cuídate, que yo no puedo hacerlo mucho, pero aunque no sea cerca, te tengo en oraciones, en mi mente y corazón, ánimos mi reina❤️✨ TE AMO!!!❤️✨
+    </div>
+
+    <div class="modal-actions">
+      <span class="ghost"></span>
+      <div>
+        <button id="dedicCloseBtn" class="btn">Cerrar ( no hace nd jajaja )</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
